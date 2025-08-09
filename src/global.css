@@ -1,0 +1,323 @@
+/* Stranger Things vibe */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+
+:root {
+  --st-bg: #0a0a0a;
+  --st-red: #d40913;
+  --st-red-deep: #7a0000;
+  --st-fg: #e6e6e6;
+}
+
+html, body {
+  background: radial-gradient(1200px 600px at 50% 20%, #0d0d0d 0%, #000 55%, #050505 100%) fixed;
+  color: var(--st-fg);
+  margin: 0;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.st-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.st-title {
+  font-family: "Cinzel", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--st-red);
+  font-size: clamp(48px, 8vw, 140px);
+  line-height: 0.9;
+  position: relative;
+  display: inline-block;
+  text-shadow:
+    0 0 2px var(--st-red-deep),
+    0 0 6px var(--st-red-deep),
+    0 0 12px var(--st-red-deep),
+    0 0 24px var(--st-red),
+    0 0 48px var(--st-red);
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,.6));
+}
+
+.st-title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  transform: scaleY(-1);
+  color: var(--st-red);
+  opacity: 0.2;
+  filter: blur(2px);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent 60%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent 60%);
+}
+
+.st-flicker {
+  animation: st-flicker 4.5s infinite steps(40, end);
+}
+
+@keyframes st-flicker {
+  0%, 4%, 6%, 8%, 100% { opacity: 1; }
+  5%, 7% { opacity: 0.78; }
+  45% { opacity: 0.92; }
+  47% { opacity: 0.65; }
+  48% { opacity: 0.9; }
+  70% { opacity: 0.82; }
+}
+
+.st-nav {
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  color: #cfcfcf;
+  padding: 12px 0;
+  border-top: 1px solid rgba(212, 9, 19, 0.35);
+  border-bottom: 1px solid rgba(212, 9, 19, 0.35);
+  margin-bottom: 28px;
+}
+
+.st-link {
+  color: var(--st-red);
+  text-decoration: none;
+}
+.st-link:hover {
+  text-shadow: 0 0 8px var(--st-red);
+}
+
+.st-button {
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  background: transparent;
+  color: var(--st-red);
+  border: 2px solid var(--st-red);
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, color .12s ease, border-color .12s ease;
+  box-shadow:
+    0 0 0 0 rgba(212,9,19,0),
+    inset 0 0 12px rgba(212,9,19,0.25);
+}
+.st-button:hover {
+  color: #fff;
+  border-color: #ff4d59;
+  box-shadow:
+    0 0 18px rgba(212,9,19,0.35),
+    inset 0 0 18px rgba(212,9,19,0.35);
+  transform: translateY(-1px);
+}
+.st-button:active {
+  transform: translateY(0);
+}
+
+.st-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.45);
+  backdrop-filter: blur(2px);
+}
+
+.st-credits {
+  font-family: "Cinzel", serif;
+  font-variant: small-caps;
+  letter-spacing: 0.18em;
+  color: #bdbdbd;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.st-upside-down {
+  filter: invert(0.9) hue-rotate(180deg) saturate(1.2) brightness(0.85);
+}
+
+/* optional: subtle scanlines */
+.st-scanlines::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+}/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html, body {
+    overscroll-behavior: none;
+}
+/* Under Production Page */
+.production-container {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.production-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.production-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.construction-icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  animation: bounce 2s infinite;
+}
+
+.contact-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #eee;
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  flex: 1;
+  max-width: 250px;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.contact-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact-role {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.contact-phone {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.contact-phone a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-phone a:hover {
+  color: #ffd700;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .production-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .production-title {
+    font-size: 2.5rem;
+  }
+  
+  .production-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-card {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .production-title {
+    font-size: 2rem;
+  }
+  
+  .contact-card {
+    padding: 1rem;
+  }
+}
