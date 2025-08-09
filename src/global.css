@@ -291,14 +291,23 @@ html, body {
   .production-container {
     margin: 1rem;
     padding: 1.5rem;
+    height: 90%;
   }
   
   .production-title {
     font-size: 2.5rem;
   }
-  
+  .construction-icon {
+    margin-bottom: 0rem;
+  }
   .production-subtitle {
     font-size: 1.1rem;
+    margin-bottom: 0rem;
+  }
+  .contact-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+
   }
   
   .contact-grid {
@@ -308,7 +317,7 @@ html, body {
   
   .contact-card {
     max-width: 300px;
-    width: 100%;
+    width: 80%;
   }
 }
 
