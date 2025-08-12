@@ -16,14 +16,14 @@ const App = () => {
         <div className="contact-card">
           <div className="contact-name">Tatwin Shelian</div>
           <div className="contact-phone">
-            📞 <a href="tel:+919943136777" aria-label="Call Tatwin Shelian">+91 86374 58726</a>
+            📞 <a href="tel:+918637458726" aria-label="Call Tatwin Shelian">+91 86374 58726</a>
           </div>
         </div>
 
         <div className="contact-card">
           <div className="contact-name">Nithesh</div>
           <div className="contact-phone">
-            📞 <a href="tel:+917708804814" aria-label="Call Nithesh">+91 82489 91003</a>
+            📞 <a href="tel:+918248991003" aria-label="Call Nithesh">+91 82489 91003</a>
           </div>
         </div>
 
