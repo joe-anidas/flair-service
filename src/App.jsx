@@ -14,25 +14,19 @@ const App = () => {
       <h2 className="contact-title">For Queries Contact:</h2>
       <div className="contact-grid">
         <div className="contact-card">
-          <div className="contact-name">Faiza Fathima</div>
+          <div className="contact-name">Tatwin Shelian</div>
           <div className="contact-phone">
-            📞 <a href="tel:+919943136777" aria-label="Call Faiza Fathima">+91 99431 36777</a>
+            📞 <a href="tel:+919943136777" aria-label="Call Tatwin Shelian">+91 86374 58726</a>
           </div>
         </div>
 
         <div className="contact-card">
-          <div className="contact-name">Miraclin Jovitta</div>
+          <div className="contact-name">Nithesh</div>
           <div className="contact-phone">
-            📞 <a href="tel:+917708804814" aria-label="Call Miraclin Jovitta">+91 77088 04814</a>
+            📞 <a href="tel:+917708804814" aria-label="Call Nithesh">+91 82489 91003</a>
           </div>
         </div>
 
-        <div className="contact-card">
-          <div className="contact-name">Jouvita Kenned</div>
-          <div className="contact-phone">
-            📞 <a href="tel:+916369194579" aria-label="Call Jouvita Kenned">+91 63691 94579</a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
